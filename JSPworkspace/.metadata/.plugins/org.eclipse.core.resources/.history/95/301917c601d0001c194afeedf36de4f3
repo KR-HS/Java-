@@ -1,0 +1,12 @@
+package kr.human.lunar;
+
+import lombok.Data;
+
+@Data
+public class LunarVO {
+
+	private String solar; // 양력
+	private String lunar; // 음력
+	private String ganji; // 간지
+
+}

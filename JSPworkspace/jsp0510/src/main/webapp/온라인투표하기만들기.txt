@@ -1,0 +1,22 @@
+1. 어디에 저장하지?
+ 나중에는 DB로 하겠지만 지금은 json으로
+ 
+ 2. 어떻게 저장?
+  투표제목
+  투표항목
+  투표개수
+  
+  {
+  	"title" : "제일 자신있는 과목은?",
+  	"item" : ["HTML","CSS","Javascript","Java","JSP"],
+  	"itemCount" :[10,5,27,67,33]
+  }
+  
+ 3. 어떻게 처리?
+ Gson라이브러리 사용
+ 
+ 4. JSP파일이 몇개나 필요?
+ 투표하기 폼 --- poll.jsp
+ 투표했을 때 저장 ---pollOK.jsp
+ 투표결과보기 --- pollResult.jsp
+  

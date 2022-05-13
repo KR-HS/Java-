@@ -1,0 +1,10 @@
+package kr.human.lunar;
+
+import lombok.Data;
+
+@Data
+public class PollVO {
+	private String title;
+	private String[] item;
+	private int[] itemCount;
+}

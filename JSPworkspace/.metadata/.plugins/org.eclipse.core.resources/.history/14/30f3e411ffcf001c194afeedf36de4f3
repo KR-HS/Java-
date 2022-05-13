@@ -1,0 +1,23 @@
+<%@page import="org.jsoup.select.Elements"%>
+<%@page import="org.jsoup.Jsoup"%>
+<%@page import="org.jsoup.nodes.Document"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 파싱하기</title>
+</head>
+<body>
+	<%
+		String urlAddress = "https://astro.kasi.re.kr/life/pageView/5";
+		// 문서 객체 얻기
+		Document document= Jsoup.connect(urlAddress).get();
+		out.println(document.title()+"<br>");
+		
+		Elements elements= document.select("table");
+		out.println("테이블 개수 : " + elements.size()+"<br>");
+		out.println(elements.get(0).html());
+	%>
+</body>
+</html>

@@ -1,0 +1,72 @@
+package kr.human.util;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
+public class cookieUtil {
+	private Map<String, Cookie> map = new HashMap<>();
+	
+	public cookieUtil(HttpServletRequest request) {
+		Cookie[] cookies = request.getCookies();
+		if(cookies!=null && cookies.length>0) {
+			for(Cookie cookie : cookies) {
+				map.put(cookie.getName(), cookie);
+			}
+		}
+	}
+	
+	public static Cookie createCookie (String name, String value) {
+		Cookie cookie = null;
+		try {
+			cookie = new Cookie(name,URLEncoder.encode(value,"UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return cookie;
+	}
+	
+	public static Cookie createCookie (String name, String value,int maxAge) {
+		Cookie cookie = null;
+		try {
+			cookie = new Cookie(name,URLEncoder.encode(value,"UTF-8"));
+			cookie.setMaxAge(maxAge);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return cookie;
+	}
+	
+	public static Cookie createCookie (String name, String value,String path,int maxAge) {
+		Cookie cookie = null;
+		try {
+			cookie = new Cookie(name,URLEncoder.encode(value,"UTF-8"));
+			cookie.setMaxAge(maxAge);
+			cookie.setPath(path);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return cookie;
+	}
+	
+	public static Cookie createCookie (String name, String value,String path,String domain,int maxAge) {
+		Cookie cookie = null;
+		try {
+			cookie = new Cookie(name,URLEncoder.encode(value,"UTF-8"));
+			cookie.setMaxAge(maxAge);
+			cookie.setPath(path);
+			cookie.setDomain(domain);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return cookie;
+	}
+}

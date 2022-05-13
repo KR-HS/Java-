@@ -1,0 +1,42 @@
+package kr.human.lunar;
+
+import lombok.Data;
+
+@Data
+public class LunarVO {
+
+	private String solar=""; // 양력
+	private String lunar=""; // 음력
+	private String ganji=""; // 간지
+
+	// 날짜를 분리하는 메서드를 추가
+	
+	//양력을 분리
+	// 2022-05-01 (일)
+	
+	// 년도 얻기
+	public String getSolarYear() {
+		return solar.split("-")[0];
+	}
+	
+	
+	// 월 얻기
+	public String getSolarMonth() {
+		return solar.split("-")[1];
+	}
+	
+	// 일 얻기
+	public String getSolarDay() {
+		return solar.split("-")[2].split(" ")[0];
+	}
+	
+	//요일을 문자로 얻기
+	public String getSolarWeek() {
+		return solar.split("-")[2].split(" ")[1].charAt(1)+"";
+	}
+	
+	//요일을 정수로 얻기
+	public int getIntSolarWeek() {
+		return "일월화수목금토".indexOf(solar.split("-")[2].split(" ")[1].charAt(1)+"");
+	}
+}

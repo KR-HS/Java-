@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/DBNBookmarkFolder/DBNResource/DBNDiagramFolder/DBNProjectDatabases">
+		<column name="이름" visible="true" order="0" width="112"/>
+		<column name="경로" visible="true" order="1" width="162"/>
+		<column name="크기" visible="true" order="2" width="100"/>
+		<column name="최종 수정" visible="true" order="3" width="176"/>
+	</item>
+	<item id="NodeList/DataSourceDescriptor">
+		<column name="이름" visible="true" order="0" width="116"/>
+		<column name="설명" visible="true" order="1" width="100"/>
+		<column name="Origin" visible="true" order="2" width="100"/>
+		<column name="드라이버 유형" visible="true" order="3" width="109"/>
+	</item>
+	<item id="NodeList/SQLiteTableColumn">
+		<column name="컬럼명" visible="true" order="0" width="100"/>
+		<column name="#" visible="true" order="1" width="100"/>
+		<column name="데이터 유형" visible="true" order="2" width="100"/>
+		<column name="Length" visible="true" order="3" width="100"/>
+		<column name="Not Null" visible="true" order="4" width="100"/>
+		<column name="Auto Increment" visible="true" order="5" width="120"/>
+		<column name="디폴트" visible="true" order="6" width="100"/>
+		<column name="설명" visible="true" order="7" width="100"/>
+	</item>
+	<item id="SchemaSelector">
+		<column name="Schema Name" visible="true" order="0" width="112"/>
+		<column name="Default Charset" visible="true" order="1" width="120"/>
+		<column name="Default Collation" visible="true" order="2" width="131"/>
+		<column name="SQL Path" visible="true" order="3" width="100"/>
+		<column name="Database size" visible="true" order="4" width="107"/>
+	</item>
+</items>

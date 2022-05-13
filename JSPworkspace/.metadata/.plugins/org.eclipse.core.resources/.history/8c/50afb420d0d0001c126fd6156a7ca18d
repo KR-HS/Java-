@@ -1,0 +1,24 @@
+<%@page import="java.io.File"%>
+<%@page import="java.util.Scanner"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Application객체를 이용한 자원접근</title>
+</head>
+<body>
+	<%
+		String realPath = application.getRealPath("/data/poll.json");
+	%>
+	서버의 절대경로 : <%=realPath %><br>
+	<hr>
+	<%
+		Scanner sc= new Scanner(new File(realPath));
+		while(sc.hasNextLine()){	
+			out.println(sc.nextLine()+"<br>");
+		}
+	%>
+</body>
+</html>

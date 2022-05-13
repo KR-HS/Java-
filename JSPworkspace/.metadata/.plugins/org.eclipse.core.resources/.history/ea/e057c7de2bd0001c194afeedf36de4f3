@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+		//POST전송일때만 처리
+		if(request.getMethod().equals("GET")){
+			// 투표하기 폼으로
+			response.sendRedirect("poll.jsp");
+			return;
+		}
+	
+	
+		// 값 받고 
+		int poll=Integer.parseInt(request.getParameter("poll"));
+		out.println(poll);
+		// 저장하고
+		
+		// 결과보기로 가기
+	%>
+</body>
+</html>

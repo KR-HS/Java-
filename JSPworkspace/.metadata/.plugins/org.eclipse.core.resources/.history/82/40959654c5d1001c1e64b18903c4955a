@@ -1,0 +1,17 @@
+-- 테이블 목록 확인하기
+show tables;
+--- 테이블 작성하기
+
+/*create table 테이블 이름(
+	필드명 데이터타입 제한조건,
+	필드명 데이터타입 제한조건,
+	.
+	.
+	.
+);*/
+create table test(
+	idx int primary key auto_increment, -- 키필드로 사용하겠다.
+	name varchar(20) not null, -- 이름은 가변길이 문자열로 20자까지 저장 및 필수 입력
+	age int(3) default 0, -- 나이는 정수 3자리이며, 기본값으로 0설정
+	gender char(1) check(gender in ('M','F'))
+);
