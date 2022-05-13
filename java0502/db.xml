@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>데이터베이스 사용자 정보</comment>
+<entry key="dbpassword">system123</entry>
+<entry key="dbuser">system</entry>
+<entry key="db">Oracle</entry>
+</properties>
