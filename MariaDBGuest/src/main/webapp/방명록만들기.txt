@@ -1,0 +1,39 @@
+방명록 만들기
+-----------------------
+ 1) DBCP 셋팅
+	- META-INF/context.xml파일 생성.
+	- WEB-INF/web.xml에 추가한 리소스를 사용
+	- kr.human.jdbc.JDBCUtil.java 생성
+	- webapp밑에 테스트할 DBCPTest.jsp파일 생성
+	
+ 2) 테이블 설계 
+ 	- 키필드
+ 	- 작성자
+ 	- 비밀번호
+ 	- 내용
+ 	- 작성일
+ 	- 아이피
+ 	
+ 	create table guestbook(
+ 		idx int primary key auto_increment,
+ 		name varchar(40) not null,
+ 		password varchar(40) not null,
+ 		content text not null, 			---- 여기만 변경
+ 		regdate timestamp default now(),
+ 		ip varchar(20) not null
+ 	);
+ 
+ 3) 패키지 3개 생성
+ 	- kr.human.guest.vo
+ 	- kr.human.guest.dao
+ 	- kr.human.guest.service
+ 	
+ 4) VO패키지에 클래스 2개 생성
+	- GuestbookVO.java  >> 테이블과 1:1 대응되게 생성
+	- PagingVO<T>       >> 페이지 계산을 하기위한 VO    ※ 제네릭 : 알고리즘은 같은데 데이터가 다른경우 사용 ex)Paging뒤의 <T>부분
+	
+
+ 5) DAO패키지에 클래스 1개 생성
+ 	- GuestbookDAO.java >> DB에 관계된 CRUD명령어를 처리. SQL명령어 한개당 메서드 한개
+ 						>> 트랜잭션 처리때문에 Connection을 인수로 받는다.
+ 						>> 싱글톤 패턴으로 작성

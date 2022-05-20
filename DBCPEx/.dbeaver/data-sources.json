@@ -1,0 +1,63 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-180ca6473aa-64722e2e6e085ccb": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "jspdb_jspuser",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "jspdb",
+				"url": "jdbc:mariadb://localhost:3306/jspdb",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"mariaDB-180ca65a4f8-6d0c192f472f1c5e": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "maria_root",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mariadb://localhost:3306/",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"sqlite_jdbc-180ca66190b-10608f1aebd6a1be": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "bible.db",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\java\\JSPworkspace\\JSP0513\\src\\main\\webapp\\data\\bible.db",
+				"url": "jdbc:sqlite:C:\\java\\JSPworkspace\\JSP0513\\src\\main\\webapp\\data\\bible.db",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
