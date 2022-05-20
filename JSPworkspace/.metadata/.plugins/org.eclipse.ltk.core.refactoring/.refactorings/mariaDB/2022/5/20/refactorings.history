@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;mariaDB/script&apos; to &apos;Scripts&apos;" description="Rename resource &apos;script&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="script" name="Scripts" stamp="1652342533403" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;mariaDB/Scripts/jsp0512.sql&apos; to &apos;jspuser_0512.sql&apos;" description="Rename resource &apos;jsp0512.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Scripts/jsp0512.sql" name="jspuser_0512.sql" stamp="1652342546973" updateReferences="true"/>
-</session>
