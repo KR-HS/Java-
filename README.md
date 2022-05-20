@@ -1,2 +1,2 @@
 # Java-
-JSPworkspace에 JSP파일들
+JSPworkspace의 JSP파일들
